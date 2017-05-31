@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223E86F84D16B36BBE155F19 /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */; };
 		307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797CD1EDF0ED600DA23AA /* AppDelegate.swift */; };
 		307797D01EDF0ED600DA23AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797CF1EDF0ED600DA23AA /* ViewController.swift */; };
-		307797D31EDF0ED600DA23AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307797D11EDF0ED600DA23AA /* Main.storyboard */; };
 		307797D51EDF0ED600DA23AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307797D41EDF0ED600DA23AA /* Assets.xcassets */; };
 		307797D81EDF0ED600DA23AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307797D61EDF0ED600DA23AA /* LaunchScreen.storyboard */; };
+		307797E11EDF0FF700DA23AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E01EDF0FF600DA23AA /* LoginViewController.swift */; };
+		307797E41EDF109F00DA23AA /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E31EDF109F00DA23AA /* UIColor+extension.swift */; };
+		307797E61EDF121D00DA23AA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E51EDF121D00DA23AA /* UIView+extension.swift */; };
+		307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */; };
+		307797EB1EDF2FB600DA23AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */; };
+		307797ED1EDF320900DA23AA /* LoginVC+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797EC1EDF320900DA23AA /* LoginVC+register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		307797CA1EDF0ED600DA23AA /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307797CD1EDF0ED600DA23AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		307797CF1EDF0ED600DA23AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		307797D21EDF0ED600DA23AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		307797D41EDF0ED600DA23AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		307797D71EDF0ED600DA23AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		307797D91EDF0ED600DA23AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307797E01EDF0FF600DA23AA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		307797E31EDF109F00DA23AA /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		307797E51EDF121D00DA23AA /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+keyboardObserver.swift"; sourceTree = "<group>"; };
+		307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		307797EC1EDF320900DA23AA /* LoginVC+register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+register.swift"; sourceTree = "<group>"; };
+		315218BF318852436F8F32E5 /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
+		87AD0E985007139D3DA2DEAE /* Pods-Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messager/Pods-Messager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223E86F84D16B36BBE155F19 /* Pods_Messager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				307797CC1EDF0ED600DA23AA /* Messager */,
 				307797CB1EDF0ED600DA23AA /* Products */,
+				CE90AA582932B4934AED7331 /* Pods */,
+				EF998369A8F9DCAF8E008A63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +72,59 @@
 			isa = PBXGroup;
 			children = (
 				307797CD1EDF0ED600DA23AA /* AppDelegate.swift */,
-				307797CF1EDF0ED600DA23AA /* ViewController.swift */,
-				307797D11EDF0ED600DA23AA /* Main.storyboard */,
+				307797E91EDF2A0000DA23AA /* Main */,
+				307797E21EDF108500DA23AA /* UI+extension */,
+				307797DF1EDF0FDD00DA23AA /* Login */,
 				307797D41EDF0ED600DA23AA /* Assets.xcassets */,
 				307797D61EDF0ED600DA23AA /* LaunchScreen.storyboard */,
 				307797D91EDF0ED600DA23AA /* Info.plist */,
+				307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */,
 			);
 			path = Messager;
+			sourceTree = "<group>";
+		};
+		307797DF1EDF0FDD00DA23AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				307797E01EDF0FF600DA23AA /* LoginViewController.swift */,
+				307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */,
+				307797EC1EDF320900DA23AA /* LoginVC+register.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		307797E21EDF108500DA23AA /* UI+extension */ = {
+			isa = PBXGroup;
+			children = (
+				307797E31EDF109F00DA23AA /* UIColor+extension.swift */,
+				307797E51EDF121D00DA23AA /* UIView+extension.swift */,
+			);
+			name = "UI+extension";
+			sourceTree = "<group>";
+		};
+		307797E91EDF2A0000DA23AA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				307797CF1EDF0ED600DA23AA /* ViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		CE90AA582932B4934AED7331 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87AD0E985007139D3DA2DEAE /* Pods-Messager.debug.xcconfig */,
+				315218BF318852436F8F32E5 /* Pods-Messager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF998369A8F9DCAF8E008A63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 307797DC1EDF0ED600DA23AA /* Build configuration list for PBXNativeTarget "Messager" */;
 			buildPhases = (
+				4A853792E1149A93370CAEA5 /* [CP] Check Pods Manifest.lock */,
 				307797C61EDF0ED600DA23AA /* Sources */,
 				307797C71EDF0ED600DA23AA /* Frameworks */,
 				307797C81EDF0ED600DA23AA /* Resources */,
+				580CB1B0A76CC724E01DC567 /* [CP] Embed Pods Frameworks */,
+				25FA88D0EDA036AF1365C887 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,33 +192,78 @@
 			files = (
 				307797D81EDF0ED600DA23AA /* LaunchScreen.storyboard in Resources */,
 				307797D51EDF0ED600DA23AA /* Assets.xcassets in Resources */,
-				307797D31EDF0ED600DA23AA /* Main.storyboard in Resources */,
+				307797EB1EDF2FB600DA23AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25FA88D0EDA036AF1365C887 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Messager/Pods-Messager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A853792E1149A93370CAEA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		580CB1B0A76CC724E01DC567 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Messager/Pods-Messager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		307797C61EDF0ED600DA23AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */,
+				307797E61EDF121D00DA23AA /* UIView+extension.swift in Sources */,
+				307797E11EDF0FF700DA23AA /* LoginViewController.swift in Sources */,
 				307797D01EDF0ED600DA23AA /* ViewController.swift in Sources */,
 				307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */,
+				307797ED1EDF320900DA23AA /* LoginVC+register.swift in Sources */,
+				307797E41EDF109F00DA23AA /* UIColor+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		307797D11EDF0ED600DA23AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				307797D21EDF0ED600DA23AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		307797D61EDF0ED600DA23AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +372,7 @@
 		};
 		307797DD1EDF0ED600DA23AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87AD0E985007139D3DA2DEAE /* Pods-Messager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2MRG3U4CR7;
@@ -274,6 +386,7 @@
 		};
 		307797DE1EDF0ED600DA23AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 315218BF318852436F8F32E5 /* Pods-Messager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2MRG3U4CR7;
@@ -304,6 +417,7 @@
 				307797DE1EDF0ED600DA23AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
