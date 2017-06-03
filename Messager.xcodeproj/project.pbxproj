@@ -22,6 +22,10 @@
 		307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */; };
 		307797EB1EDF2FB600DA23AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */; };
 		307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */; };
+		30821D9F1EE2B26C00F4C2E6 /* ChatLogController+send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */; };
+		30821DA11EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */; };
+		30821DA31EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */; };
+		30821DA51EE2C20A00F4C2E6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821DA41EE2C20A00F4C2E6 /* Message.swift */; };
 		30822E821EE2A018002067DC /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */; };
 		30822E841EE2A0FC002067DC /* PresentChatLogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */; };
 		30965D791EE07D05003B82DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30965D781EE07D05003B82DF /* User.swift */; };
@@ -47,6 +51,10 @@
 		307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+keyboardObserver.swift"; sourceTree = "<group>"; };
 		307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+login+register.swift"; sourceTree = "<group>"; };
+		30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatLogController+send.swift"; sourceTree = "<group>"; };
+		30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatLogController+observeMessagesUpdated.swift"; sourceTree = "<group>"; };
+		30821DA41EE2C20A00F4C2E6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
 		30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentChatLogDelegate.swift; sourceTree = "<group>"; };
 		30965D781EE07D05003B82DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -140,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */,
+				30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */,
+				30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */,
+				30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */,
 			);
 			name = ChatLogController;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				30965D781EE07D05003B82DF /* User.swift */,
+				30821DA41EE2C20A00F4C2E6 /* Message.swift */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -303,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */,
+				30821DA31EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift in Sources */,
 				307797E61EDF121D00DA23AA /* UIView+extension.swift in Sources */,
 				304727711EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift in Sources */,
+				30821D9F1EE2B26C00F4C2E6 /* ChatLogController+send.swift in Sources */,
 				307797E11EDF0FF700DA23AA /* LoginViewController.swift in Sources */,
 				3061FBA21EE05E27003A7EA1 /* LoginVC+segmentedControl.swift in Sources */,
 				30822E841EE2A0FC002067DC /* PresentChatLogDelegate.swift in Sources */,
@@ -317,6 +331,8 @@
 				307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */,
 				307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */,
 				304727751EE16A1700DBC4B5 /* UIImageView+extension.swift in Sources */,
+				30821DA51EE2C20A00F4C2E6 /* Message.swift in Sources */,
+				30821DA11EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift in Sources */,
 				307797E41EDF109F00DA23AA /* UIColor+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

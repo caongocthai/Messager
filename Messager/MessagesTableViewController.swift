@@ -25,7 +25,7 @@ class MessagesTableViewController: UITableViewController {
   
   func setUpNavigationBar() {
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "new_message_icon"), style: .plain, target: self, action: #selector(handleNewMessage))
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(handleNewMessage))
   }
 
   func getUserOrLogout() {
@@ -95,9 +95,8 @@ extension MessagesTableViewController: PresentChatLogDelegate {
   func presentChatLog(of partner: User) {
     let layout = UICollectionViewFlowLayout()
     let chatLogCollectionViewController = ChatLogCollectionViewController(collectionViewLayout: layout)
-    let chatLogNavigationController = UINavigationController(rootViewController: chatLogCollectionViewController)
-    present(chatLogNavigationController, animated: true) { 
-      // may do smth later
-    }
+    chatLogCollectionViewController.partner = partner
+    
+    self.navigationController?.pushViewController(chatLogCollectionViewController, animated: true)
   }
 }
