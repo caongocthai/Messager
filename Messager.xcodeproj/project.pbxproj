@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		223E86F84D16B36BBE155F19 /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */; };
+		304727711EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304727701EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift */; };
+		304727731EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304727721EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift */; };
+		304727751EE16A1700DBC4B5 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304727741EE16A1700DBC4B5 /* UIImageView+extension.swift */; };
+		3061FBA21EE05E27003A7EA1 /* LoginVC+segmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061FBA11EE05E27003A7EA1 /* LoginVC+segmentedControl.swift */; };
 		307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797CD1EDF0ED600DA23AA /* AppDelegate.swift */; };
-		307797D01EDF0ED600DA23AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797CF1EDF0ED600DA23AA /* ViewController.swift */; };
+		307797D01EDF0ED600DA23AA /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797CF1EDF0ED600DA23AA /* MessagesTableViewController.swift */; };
 		307797D51EDF0ED600DA23AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307797D41EDF0ED600DA23AA /* Assets.xcassets */; };
 		307797D81EDF0ED600DA23AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307797D61EDF0ED600DA23AA /* LaunchScreen.storyboard */; };
 		307797E11EDF0FF700DA23AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E01EDF0FF600DA23AA /* LoginViewController.swift */; };
@@ -17,14 +21,23 @@
 		307797E61EDF121D00DA23AA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E51EDF121D00DA23AA /* UIView+extension.swift */; };
 		307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */; };
 		307797EB1EDF2FB600DA23AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */; };
-		307797ED1EDF320900DA23AA /* LoginVC+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797EC1EDF320900DA23AA /* LoginVC+register.swift */; };
+		307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */; };
+		30822E821EE2A018002067DC /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */; };
+		30822E841EE2A0FC002067DC /* PresentChatLogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */; };
+		30965D791EE07D05003B82DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30965D781EE07D05003B82DF /* User.swift */; };
+		30965D7C1EE07EDC003B82DF /* NewMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30965D7B1EE07EDC003B82DF /* NewMessageTableViewController.swift */; };
+		30965D7E1EE084F3003B82DF /* NewMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30965D7D1EE084F3003B82DF /* NewMessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304727701EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterProfilePictureViewController.swift; sourceTree = "<group>"; };
+		304727721EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentProfilePicturePickerDelegate.swift; sourceTree = "<group>"; };
+		304727741EE16A1700DBC4B5 /* UIImageView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		3061FBA11EE05E27003A7EA1 /* LoginVC+segmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+segmentedControl.swift"; sourceTree = "<group>"; };
 		307797CA1EDF0ED600DA23AA /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307797CD1EDF0ED600DA23AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		307797CF1EDF0ED600DA23AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		307797CF1EDF0ED600DA23AA /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		307797D41EDF0ED600DA23AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		307797D71EDF0ED600DA23AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		307797D91EDF0ED600DA23AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,7 +46,12 @@
 		307797E51EDF121D00DA23AA /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+keyboardObserver.swift"; sourceTree = "<group>"; };
 		307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		307797EC1EDF320900DA23AA /* LoginVC+register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+register.swift"; sourceTree = "<group>"; };
+		307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+login+register.swift"; sourceTree = "<group>"; };
+		30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
+		30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentChatLogDelegate.swift; sourceTree = "<group>"; };
+		30965D781EE07D05003B82DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30965D7B1EE07EDC003B82DF /* NewMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageTableViewController.swift; sourceTree = "<group>"; };
+		30965D7D1EE084F3003B82DF /* NewMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageTableViewCell.swift; sourceTree = "<group>"; };
 		315218BF318852436F8F32E5 /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
 		87AD0E985007139D3DA2DEAE /* Pods-Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messager/Pods-Messager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				307797CD1EDF0ED600DA23AA /* AppDelegate.swift */,
-				307797E91EDF2A0000DA23AA /* Main */,
 				307797E21EDF108500DA23AA /* UI+extension */,
+				307797E91EDF2A0000DA23AA /* Main */,
 				307797DF1EDF0FDD00DA23AA /* Login */,
 				307797D41EDF0ED600DA23AA /* Assets.xcassets */,
 				307797D61EDF0ED600DA23AA /* LaunchScreen.storyboard */,
@@ -87,8 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				307797E01EDF0FF600DA23AA /* LoginViewController.swift */,
+				3061FBA11EE05E27003A7EA1 /* LoginVC+segmentedControl.swift */,
 				307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */,
-				307797EC1EDF320900DA23AA /* LoginVC+register.swift */,
+				307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */,
+				304727701EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -98,6 +118,7 @@
 			children = (
 				307797E31EDF109F00DA23AA /* UIColor+extension.swift */,
 				307797E51EDF121D00DA23AA /* UIView+extension.swift */,
+				304727741EE16A1700DBC4B5 /* UIImageView+extension.swift */,
 			);
 			name = "UI+extension";
 			sourceTree = "<group>";
@@ -105,9 +126,39 @@
 		307797E91EDF2A0000DA23AA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				307797CF1EDF0ED600DA23AA /* ViewController.swift */,
+				307797CF1EDF0ED600DA23AA /* MessagesTableViewController.swift */,
+				304727721EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift */,
+				30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */,
+				30822E7E1EE29A01002067DC /* ChatLogController */,
+				30965D7A1EE07EB8003B82DF /* NewMessage */,
+				30965D771EE07CEF003B82DF /* Modal */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		30822E7E1EE29A01002067DC /* ChatLogController */ = {
+			isa = PBXGroup;
+			children = (
+				30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */,
+			);
+			name = ChatLogController;
+			sourceTree = "<group>";
+		};
+		30965D771EE07CEF003B82DF /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				30965D781EE07D05003B82DF /* User.swift */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		30965D7A1EE07EB8003B82DF /* NewMessage */ = {
+			isa = PBXGroup;
+			children = (
+				30965D7B1EE07EDC003B82DF /* NewMessageTableViewController.swift */,
+				30965D7D1EE084F3003B82DF /* NewMessageTableViewCell.swift */,
+			);
+			name = NewMessage;
 			sourceTree = "<group>";
 		};
 		CE90AA582932B4934AED7331 /* Pods */ = {
@@ -253,10 +304,19 @@
 			files = (
 				307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */,
 				307797E61EDF121D00DA23AA /* UIView+extension.swift in Sources */,
+				304727711EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift in Sources */,
 				307797E11EDF0FF700DA23AA /* LoginViewController.swift in Sources */,
-				307797D01EDF0ED600DA23AA /* ViewController.swift in Sources */,
+				3061FBA21EE05E27003A7EA1 /* LoginVC+segmentedControl.swift in Sources */,
+				30822E841EE2A0FC002067DC /* PresentChatLogDelegate.swift in Sources */,
+				30965D7C1EE07EDC003B82DF /* NewMessageTableViewController.swift in Sources */,
+				30822E821EE2A018002067DC /* ChatLogCollectionViewController.swift in Sources */,
+				307797D01EDF0ED600DA23AA /* MessagesTableViewController.swift in Sources */,
+				304727731EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift in Sources */,
+				30965D7E1EE084F3003B82DF /* NewMessageTableViewCell.swift in Sources */,
+				30965D791EE07D05003B82DF /* User.swift in Sources */,
 				307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */,
-				307797ED1EDF320900DA23AA /* LoginVC+register.swift in Sources */,
+				307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */,
+				304727751EE16A1700DBC4B5 /* UIImageView+extension.swift in Sources */,
 				307797E41EDF109F00DA23AA /* UIColor+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

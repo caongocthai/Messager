@@ -1,5 +1,5 @@
 //
-//  LoginVC+register.swift
+//  LoginVC+login+register.swift
 //  Messager
 //
 //  Created by Harry Cao on 1/6/17.
@@ -10,6 +10,28 @@ import Foundation
 import Firebase
 
 extension LoginViewController {
+  func handleLoginRegister() {
+    isInLoginMenu ? handleLogin() : handleRegister()
+  }
+  
+  func handleLogin() {
+    guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+    
+    Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+      if (error != nil) {
+        print(error ?? "failed to log user in")
+        return
+      }
+      
+      // Clear previous user's name
+      self.delegate?.setNavigationTitle(with: "")
+      
+      self.dismiss(animated: true, completion: {
+        self.delegate?.setNavigationTitleByAccessingDatabase()
+      })
+    }
+  }
+  
   func handleRegister() {
     guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else { return }
     
@@ -22,7 +44,8 @@ extension LoginViewController {
       // sucessfully authenticated user
       
       guard let uid = user?.uid else { return }
-      
+      currentUserUid = uid
+
       let ref = Database.database().reference(fromURL: "https://theflashmessager.firebaseio.com/")
       let userReference = ref.child("users").child(uid)
       
@@ -34,10 +57,9 @@ extension LoginViewController {
         }
         
         // Successfully save user into Firebase database
-        print("\nSuccessfully save user into Firebase database\n", ref)
-        self.delegate?.userName = name
-        self.dismiss(animated: true, completion: { 
-          // maydo smth
+        self.dismiss(animated: true, completion: {
+          self.delegate?.setNavigationTitle(with: name)
+          self.delegate?.presentProfilePicturePicker(with: values)
         })
       })
     }
