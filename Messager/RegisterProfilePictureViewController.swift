@@ -158,10 +158,13 @@ extension RegisterProfilePictureViewController {
       }
       
       // Successfully save picture to staorage
-      guard let profilePictureUrl = metadata?.downloadURL()?.absoluteString else { return }
+      guard
+        let uid = Auth.auth().currentUser?.uid,
+        let profilePictureUrl = metadata?.downloadURL()?.absoluteString
+      else { return }
       self.values?["profilePictureUrl"] = profilePictureUrl
       
-      let userRef  = Database.database().reference().child("users").child(currentUserUid)
+      let userRef  = Database.database().reference().child("users").child(uid)
       userRef.updateChildValues(self.values, withCompletionBlock: { (err, dataRef) in
         if let err = err {
           print(err)

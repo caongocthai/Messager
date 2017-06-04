@@ -13,17 +13,17 @@ extension ChatLogCollectionViewController {
   
   
   func handleSend() {
-    guard let text = inputTextField.text else { return }
+    guard
+      let uid = Auth.auth().currentUser?.uid,
+      let text = inputTextField.text
+    else { return }
     if text == "" { return }
     
     let ref = Database.database().reference().child("messages")
     let messageRef = ref.childByAutoId()
-    guard
-      let fromId = currentUserUid,
-      let toId = partner?.uid
-    else { return }
+    guard let toId = partner?.uid else { return }
     let timestamp: NSNumber = Int(Date().timeIntervalSince1970) as NSNumber
-    let values = ["fromId": fromId, "toId": toId, "text": text, "timestamp": timestamp] as [String : Any]
+    let values = ["fromId": uid, "toId": toId, "text": text, "timestamp": timestamp] as [String : Any]
     
     
     messageRef.updateChildValues(values) { (error, databaseRef) in
@@ -35,8 +35,8 @@ extension ChatLogCollectionViewController {
       self.inputTextField.text = nil
       
       let messageId = messageRef.key
-      let userMessageRef = Database.database().reference().child("user_messages").child(fromId).child(toId)
-      let partnerMessageRef = Database.database().reference().child("user_messages").child(toId).child(fromId)
+      let userMessageRef = Database.database().reference().child("user_messages").child(uid).child(toId)
+      let partnerMessageRef = Database.database().reference().child("user_messages").child(toId).child(uid)
       
       userMessageRef.updateChildValues([messageId: 1])
       partnerMessageRef.updateChildValues([messageId: 1])

@@ -14,10 +14,10 @@ class User {
   let email: String
   let profilePictureUrl: String
   
-  init(uid: String, name: String, email: String, profilePictureUrl: String) {
-    self.uid = uid
-    self.name = name
-    self.email = email
-    self.profilePictureUrl = profilePictureUrl
+  init(with dictionary: [String: Any]) {
+    self.uid = dictionary["uid"] as! String
+    self.name = dictionary["name"] as! String
+    self.email = dictionary["email"] as! String
+    self.profilePictureUrl = dictionary["profilePictureUrl"] as! String
   }
 }

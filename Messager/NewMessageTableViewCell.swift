@@ -21,7 +21,7 @@ class NewMessageTableViewCell: UITableViewCell {
     let imageView = UIImageView()
     imageView.backgroundColor = UIColor(r: 240, g: 240, b: 240, a: 1)
     imageView.contentMode = .scaleAspectFill
-    imageView.layer.cornerRadius = 24
+    imageView.layer.cornerRadius = 21
     imageView.clipsToBounds = true
     return imageView
   }()
@@ -47,7 +47,7 @@ class NewMessageTableViewCell: UITableViewCell {
     
     _ = profilePictureImageView.constraintCenterTo(centerX: nil, xConstant: nil, centerY: self.centerYAnchor, yConstant: 0)
     _ = profilePictureImageView.constraintAnchorTo(top: nil, topConstant: nil, bottom: nil, bottomConstant: nil, left: self.leftAnchor, leftConstant: 16, right: nil, rightConstant: nil)
-    _ = profilePictureImageView.constraintSizeToConstant(widthConstant: 48, heightConstant: 48)
+    _ = profilePictureImageView.constraintSizeToConstant(widthConstant: 42, heightConstant: 42)
   }
   
   func addNameView() {

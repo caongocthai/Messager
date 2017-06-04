@@ -44,7 +44,6 @@ extension LoginViewController {
       // sucessfully authenticated user
       
       guard let uid = user?.uid else { return }
-      currentUserUid = uid
 
       let ref = Database.database().reference(fromURL: "https://theflashmessager.firebaseio.com/")
       let userReference = ref.child("users").child(uid)

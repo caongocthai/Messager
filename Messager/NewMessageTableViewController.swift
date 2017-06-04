@@ -33,14 +33,10 @@ class NewMessageTableViewController: UITableViewController {
   }
   
   func fetchUsers() {
-    Database.database().reference().child("users").observe(.childAdded, with: { (snapShot) in
-      guard let userDictionary = snapShot.value as? [String: Any] else { return }
-      guard
-        let name = userDictionary["name"] as? String,
-        let email = userDictionary["email"] as? String,
-        let profilePictureUrl = userDictionary["profilePictureUrl"] as? String
-      else { return }
-      let user = User(uid: snapShot.key, name: name, email: email, profilePictureUrl: profilePictureUrl)
+    Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+      guard var userDictionary = snapshot.value as? [String: Any] else { return }
+      userDictionary["uid"] = snapshot.key
+      let user = User(with: userDictionary)
       self.users.append(user)
       
       DispatchQueue.main.async {
@@ -68,7 +64,7 @@ extension NewMessageTableViewController {
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
+    return 60
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
