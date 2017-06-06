@@ -20,6 +20,8 @@ class Message {
   var imageWidth: NSNumber?
   var imageHeight: NSNumber?
   
+  var videoUrl: String?
+  
   init(with dictionary: [String: Any]) {
     self.fromId = dictionary["fromId"] as! String
     self.toId = dictionary["toId"] as! String
@@ -30,6 +32,8 @@ class Message {
     self.imageUrl = dictionary["imageUrl"] as? String
     self.imageWidth = dictionary["imageWidth"] as? NSNumber
     self.imageHeight = dictionary["imageHeight"] as? NSNumber
+    
+    self.videoUrl = dictionary["videoUrl"] as? String
   }
   
   func getPartnerId() -> String {

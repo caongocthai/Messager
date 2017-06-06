@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class NewMessageTableViewController: UITableViewController {
-  var delegate: PresentChatLogDelegate?
+  weak var delegate: PresentChatLogDelegate?
   
   var users = [User]()
   

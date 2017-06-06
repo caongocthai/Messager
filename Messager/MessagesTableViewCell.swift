@@ -36,7 +36,7 @@ class MessagesTableViewCell: UITableViewCell {
         else { return }
       
       self.nameLabel.text = name
-      self.messageLabel.text = self.message?.text ?? "Sent an image..."  // Set here so they are all set at the same time
+      self.messageLabel.text = self.message?.text ?? (self.message?.videoUrl != nil ? "Sent a video..." : "Sent an image...")  // Set here so they are all set at the same time
 
       let messageDate = Date(timeIntervalSince1970: seconds)
       let currentSeconds = Date().timeIntervalSince1970

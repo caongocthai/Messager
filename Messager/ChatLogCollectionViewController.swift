@@ -11,6 +11,17 @@ import Firebase
 
 class ChatLogCollectionViewController: UICollectionViewController, UITextFieldDelegate {
   let cellId = "cellId"
+  var timer: Timer?
+  
+  // For zooming image message
+  var startingImageView: UIImageView?
+  var startingImageViewFrame: CGRect?
+  let blackBackgroundView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .black
+    view.alpha = 0
+    return view
+  }()
   
   var partner: User? {
     didSet {
@@ -30,12 +41,13 @@ class ChatLogCollectionViewController: UICollectionViewController, UITextFieldDe
     return containerView
   }()
   
-  lazy var uploadImageButton: UIButton = {
-    let button = UIButton()
-    button.setImage(#imageLiteral(resourceName: "upload_image_icon"), for: .normal)
-    button.tintColor = .darkGray
-    button.addTarget(self, action: #selector(handleUploadImage), for: .touchUpInside)
-    return button
+  lazy var uploadImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = #imageLiteral(resourceName: "upload_image_icon")
+    imageView.contentMode = .scaleToFill
+    imageView.isUserInteractionEnabled = true
+    imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleUploadImage)))
+    return imageView
   }()
   
   lazy var inputTextField: UITextField = {
@@ -58,11 +70,14 @@ class ChatLogCollectionViewController: UICollectionViewController, UITextFieldDe
     return separatorLine
   }()
   
+  let uploadingProgressLine: UIView = {
+    let line = UIView()
+    line.backgroundColor = UIColor(r: 51, g: 102, b: 187, a: 1)
+    return line
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-//    self.navigationController?.navigationBar.backItem?.title = "Back"
-    self.navigationItem.backBarButtonItem?.title = "Back"
     
     self.collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
     self.collectionView?.alwaysBounceVertical = true
@@ -71,6 +86,8 @@ class ChatLogCollectionViewController: UICollectionViewController, UITextFieldDe
     self.collectionView?.keyboardDismissMode = .interactive
     
     self.collectionView?.register(ChatMessageCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(scrollToLastMessage), name: .UIKeyboardDidShow, object: nil)
     
     addComponentsToInputContainerView()
   }
@@ -86,18 +103,19 @@ class ChatLogCollectionViewController: UICollectionViewController, UITextFieldDe
   }
   
   func addComponentsToInputContainerView() {
-    inputContainerView.addSubview(uploadImageButton)
+    inputContainerView.addSubview(uploadImageView)
     inputContainerView.addSubview(sendButton)
     inputContainerView.addSubview(inputTextField)
     inputContainerView.addSubview(inputSeparatorLine)
+    inputContainerView.addSubview(uploadingProgressLine)
     
-    _ = uploadImageButton.constraintCenterTo(centerX: nil, xConstant: nil, centerY: inputContainerView.centerYAnchor, yConstant: 0)
-    _ = uploadImageButton.constraintAnchorTo(top: nil, topConstant: nil, bottom: nil, bottomConstant: nil, left: inputContainerView.leftAnchor, leftConstant: 8, right: nil, rightConstant: nil)
-    _ = uploadImageButton.constraintSizeToConstant(widthConstant: 44, heightConstant: 44)
+    _ = uploadImageView.constraintCenterTo(centerX: nil, xConstant: nil, centerY: inputContainerView.centerYAnchor, yConstant: 0)
+    _ = uploadImageView.constraintAnchorTo(top: nil, topConstant: nil, bottom: nil, bottomConstant: nil, left: inputContainerView.leftAnchor, leftConstant: 8, right: nil, rightConstant: nil)
+    _ = uploadImageView.constraintSizeToConstant(widthConstant: 44, heightConstant: 44)
     
     _ = sendButton.constraintAnchorTo(top: inputContainerView.topAnchor, topConstant: 0, bottom: inputContainerView.bottomAnchor, bottomConstant: 0, left: inputContainerView.rightAnchor, leftConstant: -48, right: inputContainerView.rightAnchor, rightConstant: -8)
     
-    _ = inputTextField.constraintAnchorTo(top: inputContainerView.topAnchor, topConstant: 0, bottom: inputContainerView.bottomAnchor, bottomConstant: 0, left: inputContainerView.leftAnchor, leftConstant: 8, right: sendButton.leftAnchor, rightConstant: -8)
+    _ = inputTextField.constraintAnchorTo(top: inputContainerView.topAnchor, topConstant: 0, bottom: inputContainerView.bottomAnchor, bottomConstant: 0, left: uploadImageView.rightAnchor, leftConstant: 8, right: sendButton.leftAnchor, rightConstant: -8)
     
     _ = inputSeparatorLine.constraintAnchorTo(top: inputContainerView.topAnchor, topConstant: 0, bottom: inputContainerView.topAnchor, bottomConstant: 1, left: inputContainerView.leftAnchor, leftConstant: 0, right: inputContainerView.rightAnchor, rightConstant: 0)
   }
@@ -114,9 +132,20 @@ extension ChatLogCollectionViewController {
     
     messageCell?.isSent = Auth.auth().currentUser?.uid == message.fromId
     messageCell?.partnerProfilePictureUrl = partner?.profilePictureUrl
+    
     if let messageText = message.text {
       messageCell?.messageText = messageText
       messageCell?.bubbleEstimatedWidth = estimateFrameForText(messageText).width + 24
+    }
+    
+    if let imageUrl = message.imageUrl {
+      messageCell?.imageUrl = imageUrl
+      messageCell?.bubbleEstimatedWidth = 200
+      messageCell?.delegate = self
+    }
+    
+    if let videoUrl = message.videoUrl {
+      messageCell?.videoUrl = videoUrl
     }
     
     return messageCell!
@@ -130,8 +159,9 @@ extension ChatLogCollectionViewController: UICollectionViewDelegateFlowLayout {
     var estimatedHeight: CGFloat = 0
     if let messageText = message.text {
       estimatedHeight = estimateFrameForText(messageText).height + 18
-    } else {
-      estimatedHeight = 150
+    }
+    if let imageWidth = message.imageWidth as? CGFloat, let imageHeight = message.imageHeight as? CGFloat {
+      estimatedHeight = imageHeight * 200 / imageWidth
     }
     return CGSize(width: UIScreen.main.bounds.width, height: estimatedHeight)
   }
@@ -150,6 +180,13 @@ extension ChatLogCollectionViewController {
 //      self.collectionView?.scrollToItem(at: lastItem , at: .bottom, animated: false)
 //    }
 //  }
+  
+  func scrollToLastMessage() {
+    if messages.count > 0 {
+      let indexPath = IndexPath(item: messages.count - 1, section: 0)
+      collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
+    }
+  }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     self.collectionView?.collectionViewLayout.invalidateLayout()

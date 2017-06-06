@@ -11,20 +11,29 @@ import Firebase
 
 extension ChatLogCollectionViewController {
   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    handleSend()
+    return true
+  }
   
   func handleSend() {
-    guard
-      let uid = Auth.auth().currentUser?.uid,
-      let text = inputTextField.text
-    else { return }
+    guard let text = inputTextField.text else { return }
     if text == "" { return }
+    
+    sendMessageToDatabase(with: ["text": text])
+  }
+  
+  func sendMessageToDatabase(with properties: [String: Any]) {
+    guard let uid = Auth.auth().currentUser?.uid else { return }
     
     let ref = Database.database().reference().child("messages")
     let messageRef = ref.childByAutoId()
-    guard let toId = partner?.uid else { return }
-    let timestamp: NSNumber = Int(Date().timeIntervalSince1970) as NSNumber
-    let values = ["fromId": uid, "toId": toId, "text": text, "timestamp": timestamp] as [String : Any]
     
+    guard let toId = partner?.uid else { return }
+    let timestamp = NSNumber(value: Int(Date().timeIntervalSince1970))
+    
+    var values: [String : Any] = ["fromId": uid, "toId": toId, "timestamp": timestamp]
+    properties.forEach({ values[$0] = $1 })
     
     messageRef.updateChildValues(values) { (error, databaseRef) in
       if let error = error {

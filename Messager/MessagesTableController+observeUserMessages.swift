@@ -14,6 +14,7 @@ extension MessagesTableViewController {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     
     let userMessageRef = Database.database().reference().child("user_messages").child(uid)
+    
     userMessageRef.observe(.childAdded, with: { (snapshot) in
       let partnerId = snapshot.key
       
@@ -23,6 +24,14 @@ extension MessagesTableViewController {
         
         self.fetchMessages(with: messageId)
       })
+    })
+    
+    userMessageRef.observe(.childRemoved, with: { (snapshot) in
+      let partnerID = snapshot.key
+      
+      self.newestMessagesDictionary.removeValue(forKey: partnerID)
+      self.timer?.invalidate()
+      self.timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.asyncReloadTable), userInfo: nil, repeats: false)
     })
   }
   

@@ -24,11 +24,17 @@ extension ChatLogCollectionViewController {
         let message = Message(with: messageDictionary)
         self.messages.append(message)
         
-        DispatchQueue.main.async {
-          self.collectionView?.reloadData()
-        }
+        self.timer?.invalidate()
+        self.timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.asyncReloadChatLog), userInfo: nil, repeats: false)
       })
       
     })
+  }
+  
+  func asyncReloadChatLog() {
+    DispatchQueue.main.async {
+      self.collectionView?.reloadData()
+      self.scrollToLastMessage()
+    }
   }
 }

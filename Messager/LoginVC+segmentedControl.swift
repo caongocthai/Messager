@@ -21,6 +21,8 @@ extension LoginViewController {
     nameTextFieldContraints?.forEach{ $0.isActive = false }
     nameTextFieldContraints = nameTextField.constraintSizeToMultipler(widthAnchor: nil, widthMultiplier: nil, heightAnchor: inputContainerView.heightAnchor, heightMultiplier: isInLoginMenu ? 0 : 1/3)
     nameTextFieldContraints?.forEach{ $0.isActive = true }
+    
+    // Hide nameTextField and separator if in login
     nameTextField.isHidden = isInLoginMenu
     nameEmailSeparator.isHidden = isInLoginMenu
     

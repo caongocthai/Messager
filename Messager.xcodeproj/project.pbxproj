@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		223E86F84D16B36BBE155F19 /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */; };
+		3011EC381EE6ABF1003E755E /* ChatMessageCell+zoomImage+playVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011EC371EE6ABF1003E755E /* ChatMessageCell+zoomImage+playVideo.swift */; };
 		3045C2C41EE425F60042993E /* Date+getTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045C2C31EE425F60042993E /* Date+getTimeString.swift */; };
 		3045C2C61EE428A30042993E /* String+estimatedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045C2C51EE428A30042993E /* String+estimatedRect.swift */; };
 		3045C2C81EE44D250042993E /* ChatLogController+uploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045C2C71EE44D250042993E /* ChatLogController+uploadImage.swift */; };
@@ -26,6 +27,9 @@
 		307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */; };
 		307797EB1EDF2FB600DA23AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */; };
 		307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */; };
+		3081413F1EE4679600E38560 /* ZoomImageAndPlayVideoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3081413E1EE4679600E38560 /* ZoomImageAndPlayVideoDelegate.swift */; };
+		308141411EE4680400E38560 /* ChatController+zoomImage+playVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308141401EE4680400E38560 /* ChatController+zoomImage+playVideo.swift */; };
+		308141431EE47CC700E38560 /* MessagesTalbeController+delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308141421EE47CC700E38560 /* MessagesTalbeController+delete.swift */; };
 		30821D9F1EE2B26C00F4C2E6 /* ChatLogController+send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */; };
 		30821DA11EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */; };
 		30821DA31EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */; };
@@ -41,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		16CDC621BEAAF25FA487AEC5 /* Pods_Messager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3011EC371EE6ABF1003E755E /* ChatMessageCell+zoomImage+playVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatMessageCell+zoomImage+playVideo.swift"; sourceTree = "<group>"; };
 		3045C2C31EE425F60042993E /* Date+getTimeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+getTimeString.swift"; sourceTree = "<group>"; };
 		3045C2C51EE428A30042993E /* String+estimatedRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+estimatedRect.swift"; sourceTree = "<group>"; };
 		3045C2C71EE44D250042993E /* ChatLogController+uploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatLogController+uploadImage.swift"; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 		307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+keyboardObserver.swift"; sourceTree = "<group>"; };
 		307797EA1EDF2FB600DA23AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+login+register.swift"; sourceTree = "<group>"; };
+		3081413E1EE4679600E38560 /* ZoomImageAndPlayVideoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomImageAndPlayVideoDelegate.swift; sourceTree = "<group>"; };
+		308141401EE4680400E38560 /* ChatController+zoomImage+playVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatController+zoomImage+playVideo.swift"; sourceTree = "<group>"; };
+		308141421EE47CC700E38560 /* MessagesTalbeController+delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagesTalbeController+delete.swift"; sourceTree = "<group>"; };
 		30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatLogController+send.swift"; sourceTree = "<group>"; };
 		30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatLogController+observeMessagesUpdated.swift"; sourceTree = "<group>"; };
@@ -88,6 +96,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3011EC2E1EE6A817003E755E /* MessagesTable */ = {
+			isa = PBXGroup;
+			children = (
+				3011EC341EE6A8D0003E755E /* Controller */,
+				3011EC2F1EE6A84C003E755E /* MessageCell */,
+				3011EC301EE6A869003E755E /* Delegate */,
+			);
+			name = MessagesTable;
+			sourceTree = "<group>";
+		};
+		3011EC2F1EE6A84C003E755E /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				30821DA81EE2EC3C00F4C2E6 /* MessagesTableViewCell.swift */,
+			);
+			name = MessageCell;
+			sourceTree = "<group>";
+		};
+		3011EC301EE6A869003E755E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				304727721EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift */,
+				30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		3011EC311EE6A887003E755E /* ChatMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */,
+				3011EC371EE6ABF1003E755E /* ChatMessageCell+zoomImage+playVideo.swift */,
+			);
+			name = ChatMessageCell;
+			sourceTree = "<group>";
+		};
+		3011EC321EE6A898003E755E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3081413E1EE4679600E38560 /* ZoomImageAndPlayVideoDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		3011EC331EE6A8C6003E755E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */,
+				30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */,
+				3045C2C71EE44D250042993E /* ChatLogController+uploadImage.swift */,
+				30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */,
+				308141401EE4680400E38560 /* ChatController+zoomImage+playVideo.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3011EC341EE6A8D0003E755E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				307797CF1EDF0ED600DA23AA /* MessagesTableViewController.swift */,
+				308141421EE47CC700E38560 /* MessagesTalbeController+delete.swift */,
+				30821DA61EE2CB6600F4C2E6 /* MessagesTableController+observeUserMessages.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3011EC351EE6A8E8003E755E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				307797E01EDF0FF600DA23AA /* LoginViewController.swift */,
+				3061FBA11EE05E27003A7EA1 /* LoginVC+segmentedControl.swift */,
+				307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */,
+				307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		3011EC361EE6A8F4003E755E /* PictureRegister */ = {
+			isa = PBXGroup;
+			children = (
+				304727701EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift */,
+			);
+			name = PictureRegister;
+			sourceTree = "<group>";
+		};
 		307797C11EDF0ED600DA23AA = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +204,7 @@
 			children = (
 				307797CD1EDF0ED600DA23AA /* AppDelegate.swift */,
 				307797E21EDF108500DA23AA /* UI+extension */,
+				30965D771EE07CEF003B82DF /* Modal */,
 				307797E91EDF2A0000DA23AA /* Main */,
 				307797DF1EDF0FDD00DA23AA /* Login */,
 				307797D41EDF0ED600DA23AA /* Assets.xcassets */,
@@ -124,11 +218,8 @@
 		307797DF1EDF0FDD00DA23AA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				307797E01EDF0FF600DA23AA /* LoginViewController.swift */,
-				3061FBA11EE05E27003A7EA1 /* LoginVC+segmentedControl.swift */,
-				307797E71EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift */,
-				307797EC1EDF320900DA23AA /* LoginVC+login+register.swift */,
-				304727701EE10C7400DBC4B5 /* RegisterProfilePictureViewController.swift */,
+				3011EC351EE6A8E8003E755E /* Login */,
+				3011EC361EE6A8F4003E755E /* PictureRegister */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -149,14 +240,9 @@
 		307797E91EDF2A0000DA23AA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				307797CF1EDF0ED600DA23AA /* MessagesTableViewController.swift */,
-				30821DA61EE2CB6600F4C2E6 /* MessagesTableController+observeUserMessages.swift */,
-				30821DA81EE2EC3C00F4C2E6 /* MessagesTableViewCell.swift */,
-				304727721EE10D4B00DBC4B5 /* PresentProfilePicturePickerDelegate.swift */,
-				30822E831EE2A0FC002067DC /* PresentChatLogDelegate.swift */,
+				3011EC2E1EE6A817003E755E /* MessagesTable */,
 				30822E7E1EE29A01002067DC /* ChatLogController */,
 				30965D7A1EE07EB8003B82DF /* NewMessage */,
-				30965D771EE07CEF003B82DF /* Modal */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -164,11 +250,9 @@
 		30822E7E1EE29A01002067DC /* ChatLogController */ = {
 			isa = PBXGroup;
 			children = (
-				30822E811EE2A018002067DC /* ChatLogCollectionViewController.swift */,
-				3045C2C71EE44D250042993E /* ChatLogController+uploadImage.swift */,
-				30821DA21EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift */,
-				30821D9E1EE2B26C00F4C2E6 /* ChatLogController+send.swift */,
-				30821DA01EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift */,
+				3011EC331EE6A8C6003E755E /* Controller */,
+				3011EC311EE6A887003E755E /* ChatMessageCell */,
+				3011EC321EE6A898003E755E /* Delegate */,
 			);
 			name = ChatLogController;
 			sourceTree = "<group>";
@@ -332,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308141411EE4680400E38560 /* ChatController+zoomImage+playVideo.swift in Sources */,
 				307797E81EDF1AE700DA23AA /* LoginVC+keyboardObserver.swift in Sources */,
 				30821DA71EE2CB6600F4C2E6 /* MessagesTableController+observeUserMessages.swift in Sources */,
 				30821DA31EE2C03000F4C2E6 /* ChatLogController+observeMessagesUpdated.swift in Sources */,
@@ -353,9 +438,12 @@
 				307797CE1EDF0ED600DA23AA /* AppDelegate.swift in Sources */,
 				307797ED1EDF320900DA23AA /* LoginVC+login+register.swift in Sources */,
 				3045C2C41EE425F60042993E /* Date+getTimeString.swift in Sources */,
+				3011EC381EE6ABF1003E755E /* ChatMessageCell+zoomImage+playVideo.swift in Sources */,
 				304727751EE16A1700DBC4B5 /* UIImageView+extension.swift in Sources */,
 				306D947A1EE332C100D13782 /* Double+getTimeAgoString.swift in Sources */,
+				308141431EE47CC700E38560 /* MessagesTalbeController+delete.swift in Sources */,
 				30821DA51EE2C20A00F4C2E6 /* Message.swift in Sources */,
+				3081413F1EE4679600E38560 /* ZoomImageAndPlayVideoDelegate.swift in Sources */,
 				30821DA11EE2BA8B00F4C2E6 /* ChatMessageCollectionViewCell.swift in Sources */,
 				307797E41EDF109F00DA23AA /* UIColor+extension.swift in Sources */,
 			);
@@ -481,6 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppsInnovation.Messager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -495,6 +584,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppsInnovation.Messager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

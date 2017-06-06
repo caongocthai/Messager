@@ -25,6 +25,7 @@ class MessagesTableViewController: UITableViewController {
     getUserOrLogout()
     setUpNavigationBar()
     observeUserMessages()
+    setupForDeleteableRow()
   }
   
   func setUpNavigationBar() {

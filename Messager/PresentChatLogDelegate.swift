@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol PresentChatLogDelegate {
+protocol PresentChatLogDelegate: class {
   func presentChatLog(of partner: User)
 }

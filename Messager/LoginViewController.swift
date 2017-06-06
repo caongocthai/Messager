@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-  var delegate: SetNavTitleAndPresentProfilePicturePickerDelegate?
+  weak var delegate: SetNavTitleAndPresentProfilePicturePickerDelegate?
   
   var isInLoginMenu = true
   
