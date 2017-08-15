@@ -1,6 +1,7 @@
 # Messager
 
-Messager is a real time message app that lets users chat to other.
+Messager is a real time message app that lets users chat to others.<br />
+Messager uses Google's Firebase as its BackEnd.
 
 ## Demo
 
