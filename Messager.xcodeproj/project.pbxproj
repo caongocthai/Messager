@@ -327,7 +327,7 @@
 				TargetAttributes = {
 					307797C91EDF0ED600DA23AA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2MRG3U4CR7;
+						DevelopmentTeam = 78DY2XFN75;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -563,7 +563,7 @@
 			baseConfigurationReference = 87AD0E985007139D3DA2DEAE /* Pods-Messager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2MRG3U4CR7;
+				DEVELOPMENT_TEAM = 78DY2XFN75;
 				INFOPLIST_FILE = Messager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppsInnovation.Messager;
@@ -578,7 +578,7 @@
 			baseConfigurationReference = 315218BF318852436F8F32E5 /* Pods-Messager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2MRG3U4CR7;
+				DEVELOPMENT_TEAM = 78DY2XFN75;
 				INFOPLIST_FILE = Messager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppsInnovation.Messager;
