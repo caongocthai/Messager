@@ -6,11 +6,19 @@ Messager is a real time message app that lets users chat to other.
 
 #### Register an account
 
-![alt text](./Demo/register.gif =270x)
-<img src="./Demo/register.gif" width="200">
+<img src="./Demo/register.gif" width="500">
 
 #### Set Profile picture
 
+<img src="./Demo/set_avatar.gif" width="500">
+
+
 #### Send a message
 
+<img src="./Demo/send_message.gif" width="500">
+
+
 #### Send a picture and a video
+
+<img src="./Demo/send_pic_video.gif" width="500">
+
